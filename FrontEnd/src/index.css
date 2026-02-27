@@ -1,0 +1,135 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body,#root{
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.create-post-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6fb;
+  padding: 20px;
+}
+
+.create-post-section h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.create-post-section form {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.create-post-section input[type="file"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.create-post-section input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.create-post-section input[type="text"]:focus {
+  border-color: #6366f1;
+}
+
+.create-post-section button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6366f1;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.create-post-section button:hover {
+  background-color: #4f46e5;
+}
+
+.posts-section {
+  background:#f4f6fb;   
+  height: 100vh;
+  padding: 50px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Single post card */
+.post-card {
+  background: #ccc8c8;
+  height: fit-content;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect */
+.post-card:hover {
+  transform: translateY(-25px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Post image */
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Caption */
+.post-card h3 {
+  padding: 12px 14px;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* No post text */
+.posts-section h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 60px;
+}
